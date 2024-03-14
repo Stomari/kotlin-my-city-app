@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">my-city-app</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="bars">Bars</string>
+    <string name="malls">Malls</string>
+    <string name="manga">Manga com Açaí</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet dolor vel risus porta, sit amet eleifend elit ullamcorper. Morbi tincidunt ac justo eget maximus. Nulla congue facilisis velit, sit amet tempus enim lobortis nec. Fusce pulvinar nec risus non lacinia. Duis volutpat quis felis ac aliquet. Nulla nec ex nec augue maximus scelerisque. Suspendisse consectetur mauris eu magna ornare, non pretium nibh iaculis.\n</string>
+</resources>
