@@ -14,9 +14,20 @@ class MyCityViewModel : ViewModel() {
     private val categories = CategoriesData.loadCategories()
 
     fun selectCategory(id: Int) {
-        _uiState.update {currentState ->
+        val selectedCategory = categories.filter { it.id == id }[0]
+        _uiState.update { currentState ->
             currentState.copy(
-                selectedCategory = categories.filter { it.id == id }[0]
+                selectedCategory = selectedCategory,
+                selectedRecommendation = selectedCategory.recommendations[0]
+            )
+        }
+    }
+
+    fun selectRecommendation(id: Int) {
+        _uiState.update { currentState ->
+            currentState.copy(
+                selectedRecommendation = _uiState.value.selectedCategory?.recommendations?.filter { it?.id == id }
+                    ?.get(0)
             )
         }
     }

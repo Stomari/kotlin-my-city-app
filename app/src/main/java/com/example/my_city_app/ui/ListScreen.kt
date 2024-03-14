@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import com.example.my_city_app.R
 import com.example.my_city_app.data.CategoriesData
 import com.example.my_city_app.model.ListItem
+import com.example.my_city_app.model.Recommendation
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -60,6 +61,19 @@ fun ListScreen(
     }
 }
 
+@Composable
+fun ListScreenWithDetails(
+    itemsList: List<ListItem>,
+    onCardClick: (Int) -> Unit,
+    recommendation: Recommendation,
+    modifier: Modifier = Modifier
+) {
+    Row(modifier = modifier) {
+        ListScreen(itemsList = itemsList, onCardClick = onCardClick, modifier = Modifier.weight(1f))
+        DetailsScreen(recommendation = recommendation, modifier = Modifier.weight(1f))
+    }
+}
+
 @Preview
 @Composable
 fun ListScreenPreview() {
@@ -67,4 +81,14 @@ fun ListScreenPreview() {
         ListItem(it.id, it.title, it.imgResource)
     }
     ListScreen(itemsList = list, onCardClick = {})
+}
+
+@Preview(widthDp = 1000, showBackground = true)
+@Composable
+fun ListScreenWithDetailsPreview() {
+    val categories = CategoriesData.loadCategories()
+    val list = categories.map {
+        ListItem(it.id, it.title, it.imgResource)
+    }
+    ListScreenWithDetails(itemsList = list, onCardClick = {}, recommendation = categories[0].recommendations[0]!!)
 }

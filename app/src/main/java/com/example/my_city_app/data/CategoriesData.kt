@@ -17,6 +17,12 @@ object CategoriesData {
                         title = R.string.manga,
                         imgResource = R.drawable.acai,
                         description = R.string.lorem_ipsum
+                    ),
+                    Recommendation(
+                        id = 4,
+                        title = R.string.wilson_s_bar,
+                        imgResource = R.drawable.wilson,
+                        description = R.string.lorem_ipsum
                     )
                 )
             ),
@@ -25,6 +31,12 @@ object CategoriesData {
                 imgResource = R.drawable.bars,
                 title = R.string.bars,
                 recommendations = listOf(
+                    Recommendation(
+                        id = 5,
+                        title = R.string.wilson_s_bar,
+                        imgResource = R.drawable.wilson,
+                        description = R.string.lorem_ipsum
+                    ),
                     Recommendation(
                         id = 2,
                         title = R.string.manga,
@@ -42,6 +54,12 @@ object CategoriesData {
                         id = 3,
                         title = R.string.manga,
                         imgResource = R.drawable.restaurant,
+                        description = R.string.lorem_ipsum
+                    ),
+                    Recommendation(
+                        id = 6,
+                        title = R.string.wilson_s_bar,
+                        imgResource = R.drawable.wilson,
                         description = R.string.lorem_ipsum
                     )
                 )
